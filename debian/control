@@ -1,0 +1,22 @@
+Source: libjs-jquery
+Section: web
+Priority: optional
+Maintainer: Vítězslav Dvořák <info@vitexsoftware.cz>
+Uploaders: Vitex <vitex@hippy.cz>
+Build-Depends: debhelper (>= 7.0.50~), node-uglify
+Standards-Version: 3.9.4
+Homepage: http://jquery.com/
+Vcs-Browser: https://github.com/jquery/jquery
+Vcs-Git: git://git@github.com:jquery/jquery.git
+
+Package: libjs-jquery
+Architecture: all
+Multi-Arch: foreign
+Breaks: movabletype-opensource (<< 5.1.4+dfsg-3~)
+Depends: ${misc:Depends}
+Recommends: javascript-common
+Description: JavaScript library for dynamic web applications
+ jQuery is a fast, concise, JavaScript Library that simplifies how you
+ traverse HTML documents, handle events, perform animations, and add Ajax
+ interactions to your web pages. jQuery is designed to change the way
+ that you write JavaScript.

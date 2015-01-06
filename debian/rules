@@ -1,0 +1,24 @@
+#!/usr/bin/make -f
+BUILD_DIR:=dist
+
+%:
+	dh $@
+build:
+	dh $@
+
+override_dh_auto_build:
+	mkdir -p $(BUILD_DIR)
+	cp -rv ~/Projects/3RDParty/jquery/dist/* $(BUILD_DIR)
+	dh_auto_build
+
+
+override_dh_auto_clean:
+	rm -rf dist/
+	dh_clean
+
+override_dh_clean:
+	rm -rf dist/
+	-rm build/.sizecache.json
+	dh_clean
+
+.PHONY: build
